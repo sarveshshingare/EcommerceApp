@@ -4,20 +4,19 @@ import 'package:ecommerce_app/common/widgets/texts/section_headings.dart';
 
 import 'package:ecommerce_app/features/shop/screens/widgets/home_appBar.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
+
 import 'package:ecommerce_app/utils/constants/sizes.dart';
-import 'package:ecommerce_app/utils/device/device_utility.dart';
-import 'package:ecommerce_app/utils/helpers/helper_functions.dart';
+import 'package:ecommerce_app/utils/utils/constants/image_strings.dart';
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
         body: SingleChildScrollView(
       child: Column(
         children: [
@@ -46,15 +45,44 @@ class HomeScreen extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      TSectionHeading(
+                      const TSectionHeading(
                         title: 'Popular Catrgories',
                         showActionButtons: false,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: TSizes.spaceBtwItems,
                       ),
 
-                      // stopped 16 min search bar and hor.....
+                      ///categories
+                      SizedBox(
+                        height: 80,
+                        child: ListView.builder(
+                            shrinkWrap: true,
+                            itemCount: 6,
+                            scrollDirection: Axis.horizontal,
+                            itemBuilder: (_, index) {
+                              return Column(
+                                children: [
+                                  Container(
+                                    width: 56,
+                                    height: 56,
+                                    padding: EdgeInsets.all(TSizes.sm),
+                                    decoration: BoxDecoration(
+                                        color: TColors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(100)),
+                                    child: Center(
+                                      child: Image(
+                                        image: AssetImage(TImages.sportIcon),
+                                        fit: BoxFit.cover,
+                                        color: TColors.dark,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              );
+                            }),
+                      )
                     ],
                   ))
             ],
