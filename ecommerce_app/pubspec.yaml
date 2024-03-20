@@ -34,5 +34,6 @@ flutter:
 
   assets:
     - assets/images/on_boarding_images/
-    - assets/images/logos/
-    - assets/images/animations/
+    - assets/logos/
+    - assets/animations/
+    - assets/icons/categories/

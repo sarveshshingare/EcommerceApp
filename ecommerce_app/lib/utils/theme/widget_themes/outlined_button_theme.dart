@@ -25,7 +25,7 @@ class TOutlinedButtonTheme {
     style: OutlinedButton.styleFrom(
       foregroundColor: TColors.light,
       side: const BorderSide(color: TColors.borderPrimary),
-      textStyle: const TextStyle(fontSize: 16, color: TColors.white, fontWeight: FontWeight.w600),
+      textStyle: const TextStyle(fontSize: 16, color: TColors.textWhite, fontWeight: FontWeight.w600),
       padding: const EdgeInsets.symmetric(vertical: TSizes.buttonHeight, horizontal: 20),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(TSizes.buttonRadius)),
     ),

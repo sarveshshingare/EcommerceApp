@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/features/shop/screens/home.dart';
+import 'package:ecommerce_app/utils/constants/colors.dart';
 import 'package:ecommerce_app/utils/helpers/helper_functions.dart';
-import 'package:ecommerce_app/utils/utils/constants/colors.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';

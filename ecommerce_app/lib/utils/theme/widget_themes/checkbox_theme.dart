@@ -18,7 +18,7 @@ class TCheckboxTheme {
     }),
     fillColor: MaterialStateProperty.resolveWith((states) {
       if (states.contains(MaterialState.selected)) {
-        return TColors.primaryColor;
+        return TColors.primary;
       } else {
         return Colors.transparent;
       }
@@ -37,7 +37,7 @@ class TCheckboxTheme {
     }),
     fillColor: MaterialStateProperty.resolveWith((states) {
       if (states.contains(MaterialState.selected)) {
-        return TColors.primaryColor;
+        return TColors.primary;
       } else {
         return Colors.transparent;
       }

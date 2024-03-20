@@ -4,12 +4,13 @@ import 'package:ecommerce_app/common/widgets/texts/section_headings.dart';
 
 import 'package:ecommerce_app/features/shop/screens/widgets/home_appBar.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
+import 'package:ecommerce_app/utils/constants/image_strings.dart';
 
 import 'package:ecommerce_app/utils/constants/sizes.dart';
-import 'package:ecommerce_app/utils/utils/constants/image_strings.dart';
+
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -71,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                                         color: TColors.white,
                                         borderRadius:
                                             BorderRadius.circular(100)),
-                                    child: Center(
+                                    child: const Center(
                                       child: Image(
                                         image: AssetImage(TImages.sportIcon),
                                         fit: BoxFit.cover,
