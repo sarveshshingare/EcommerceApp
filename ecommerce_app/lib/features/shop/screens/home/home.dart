@@ -1,17 +1,12 @@
-import 'package:carousel_slider/carousel_options.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:ecommerce_app/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/search_container.dart';
-import 'package:ecommerce_app/common/widgets/image_text_widgets/vertical_image_text.dart';
-import 'package:ecommerce_app/common/widgets/images/t_rounded_images.dart';
 import 'package:ecommerce_app/common/widgets/layouts/grid_layout.dart';
 import 'package:ecommerce_app/common/widgets/products/products_cards/product_card_vertical.dart';
 import 'package:ecommerce_app/common/widgets/texts/section_headings.dart';
 
-import 'package:ecommerce_app/features/shop/screens/widgets/home_appBar.dart';
-import 'package:ecommerce_app/features/shop/screens/widgets/home_categories.dart';
-import 'package:ecommerce_app/features/shop/screens/widgets/promoslider.dart';
+import 'package:ecommerce_app/features/shop/screens/home/widgets/home_appBar.dart';
+import 'package:ecommerce_app/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:ecommerce_app/features/shop/screens/home/widgets/promoslider.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
 import 'package:ecommerce_app/utils/constants/image_strings.dart';
 
@@ -42,6 +37,7 @@ class HomeScreen extends StatelessWidget {
                     ///--SearchBar -- tutorial [section #3,video #4]
                     TSearchContainer(
                       text: 'Search in Store',
+                      padding: EdgeInsets.zero,
                     ),
                     SizedBox(
                       height: TSizes.spaceBtwSections,
@@ -86,8 +82,17 @@ class HomeScreen extends StatelessWidget {
                     const SizedBox(
                       height: TSizes.spaceBtwSections,
                     ),
+                    //---------------Heading------------------------
 
-                    // popular products
+                    TSectionHeading(
+                      title: "Popular Products",
+                      onPressed: () {},
+                    ),
+                    const SizedBox(
+                      height: TSizes.spaceBtwSections,
+                    ),
+                    // -----------------------popular products--------------------------------
+
                     TGridLayout(
                         itemCount: 2,
                         itemBuilder: (_, index) => TProductCardVertical())

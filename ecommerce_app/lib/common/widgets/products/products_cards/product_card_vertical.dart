@@ -4,6 +4,7 @@ import 'package:ecommerce_app/common/widgets/icons/t_circular_Icon.dart';
 import 'package:ecommerce_app/common/widgets/images/t_rounded_images.dart';
 import 'package:ecommerce_app/common/widgets/texts/product_price_text.dart';
 import 'package:ecommerce_app/common/widgets/texts/product_title_text.dart';
+import 'package:ecommerce_app/common/widgets/texts/t_brand_title_text_with_verified_Icon.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
 import 'package:ecommerce_app/utils/constants/image_strings.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
@@ -72,67 +73,57 @@ class TProductCardVertical extends StatelessWidget {
             ),
             // Details
 
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const TProductTitleText(
+                  TProductTitleText(
                     title: "Green Nike AIr Shoes",
                     smallSize: true,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        "Nike",
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(
-                        height: TSizes.xs,
-                      ),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: TColors.primary,
-                        size: TSizes.iconXs,
-                      )
-                    ],
+                  TBrandTitleTextwithVerifiedIcon(
+                    title: 'Nike',
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // Price
-
-                      const TProductPrice(
-                        price: '38.0',
-                      ),
-                      Container(
-                        decoration: const BoxDecoration(
-                            color: TColors.dark,
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(TSizes.cardRadiusMd),
-                                bottomRight: Radius.circular(
-                                    TSizes.productImageRadius))),
-                        child: const SizedBox(
-                          width: TSizes.iconLg * 1.2,
-                          height: TSizes.iconLg * 1.2,
-                          child: Center(
-                            child: Icon(
-                              Iconsax.add,
-                              color: TColors.white,
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
-                  )
                 ],
               ),
-            )
+            ),
+            const Spacer(),
+            // price row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Price
+
+                const Padding(
+                  padding: EdgeInsets.only(left: TSizes.sm),
+                  child: TProductPrice(
+                    price: '38.0',
+                  ),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                      color: TColors.dark,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(TSizes.cardRadiusMd),
+                          bottomRight:
+                              Radius.circular(TSizes.productImageRadius))),
+                  child: const SizedBox(
+                    width: TSizes.iconLg * 1.2,
+                    height: TSizes.iconLg * 1.2,
+                    child: Center(
+                      child: Icon(
+                        Iconsax.add,
+                        color: TColors.white,
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),

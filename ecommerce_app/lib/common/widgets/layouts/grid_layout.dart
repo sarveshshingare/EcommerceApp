@@ -15,11 +15,11 @@ class TGridLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           mainAxisSpacing: TSizes.gridViewSpacing,
           crossAxisSpacing: TSizes.gridViewSpacing,
-          mainAxisExtent: 288),
+          mainAxisExtent: mainAxisExtent),
       itemCount: itemCount,
       shrinkWrap: true,
       padding: EdgeInsets.zero,
