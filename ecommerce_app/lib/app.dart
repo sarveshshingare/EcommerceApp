@@ -1,4 +1,6 @@
+import 'package:ecommerce_app/bindings/general_bindings.dart';
 import 'package:ecommerce_app/features/authentication/screens/Onboarding/onboarding.dart';
+import 'package:ecommerce_app/utils/constants/colors.dart';
 import 'package:ecommerce_app/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,7 +15,14 @@ class App extends StatelessWidget {
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: const OnboardingScreen(),
+      initialBinding: GeneralBindings(),
+      home: const Scaffold(
+        backgroundColor: TColors.primary,
+        body: Center(
+            child: CircularProgressIndicator(
+          color: Colors.white,
+        )),
+      ),
     );
   }
 }

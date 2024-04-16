@@ -23,6 +23,12 @@ dependencies:
   iconsax: ^0.0.8
   test: ^1.24.9
   carousel_slider: ^4.2.1
+  firebase_auth: ^4.19.0
+  firebase_core: ^2.28.0
+  flutter_native_splash: ^2.4.0
+  lottie: ^3.1.0
+  connectivity_plus: ^5.0.1
+  cloud_firestore: ^4.16.0
 
 dev_dependencies:
   flutter_test:
